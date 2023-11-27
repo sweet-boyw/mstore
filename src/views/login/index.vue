@@ -39,7 +39,11 @@ export default {
         }
     },
     mounted() {
-        axios.get('http://localhost:3000/hello').then(res =>{
+        let data = {
+            username:'wangxingjiang',
+            password:'12345'
+        }
+        axios.post('http://localhost:3000/register',data).then(res =>{
             console.log("hello接口",res)
         })
     },
